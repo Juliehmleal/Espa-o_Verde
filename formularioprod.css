@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+}
+
+.site-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+main {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.upload-container {
+    position: relative;
+}
+
+.upload-container input[type="file"] {
+    width: 100%;
+    padding-right: 30px; 
+    display: none;
+}
+
+.upload-container .upload-label {
+    color: #4A7F4F;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.upload-container .upload-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.upload-container .upload-icon img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+#preview {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+
+button {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+button.cancelar, button.registrar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+button.cancelar {
+    background-color: #F57F2E;
+    color: white;
+}
+
+
+button.registrar {
+    background-color: #4A7F4F;
+    color: white;
+}
+
+button.cancelar:hover, button.registrar:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+
+footer {
+    background-color: #4A7F4F;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-text {
+    color: white;
+}
+
+.footer-section-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-section-left p {
+    margin: 0;
+}
+
+.footer-section-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-section-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .footer-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .footer-email .icon {
+    width: 20px;
+}
+
+footer .icon-logo {
+    width: 40px;
+}
+
+footer .footer-section-left a,
+footer .footer-section-center a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer .footer-section-left a:hover,
+footer .footer-section-center a:hover {
+    color: #F57F2E;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer-section-left,
+    footer .footer-section-center,
+    footer .footer-section-right {
+        align-items: center;
+    }
+
+    main {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    button {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+}
+

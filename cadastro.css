@@ -1,0 +1,70 @@
+/* Estilo Geral */
+.custom-bg {
+    background-color: #F2F2F2 !important;
+}
+.bg-success {
+    background-color: #4A7F4F !important;
+}
+
+.btn-warning {
+    background-color: #F57F2E !important; 
+    border-color: #4A7F4F !important;
+    color: #ffffff !important;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #F2F2F2; 
+    
+}
+
+h3 {
+    font-weight: bold;
+}
+
+button {
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.left-panel button:hover {
+    background-color: #d96a30;
+}
+
+form input {
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+form .btn-warning {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-lg-5, .col-lg-7 {
+        width: 100%;
+    }
+
+    .left-panel {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .right-panel {
+        padding: 20px;
+    }
+}

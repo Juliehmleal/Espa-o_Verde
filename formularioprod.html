@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Materiais</title>
+    <link rel="stylesheet" href="formularioprod.css">
+    <link rel="stylesheet" href="modelo.css">
+    <link rel="stylesheet" href="vendor/bs5.3.3/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4A7F4F;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="vendor/bs5.3.3/icons/Icone com fundo.svg" alt="Ícone Espaço Verde" style="height: 50px; width: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold text-white" aria-current="page" href="index.html">Espaço Verde</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="plataforma.html">Plataforma</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white disabled" aria-disabled="true" href="formularioprod.html">Cadastro de Produtos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Registro de materiais para venda</h1>
+        <form action="#">
+            <div class="input-container">
+                <label for="imagem">Imagem do produto:</label>
+                <div class="upload-container">
+                    <input type="file" id="imagem" name="imagem" accept="image/*" style="display:none" onchange="previewImage(event)">
+                    <label for="imagem" class="upload-label">
+                        Subir imagem
+                    </label>
+                    <label for="imagem" class="upload-icon">
+                        <img src="icon - formulario produtos/subir.svg" alt="Subir" />
+                    </label>
+                    <img id="preview" src="#" alt="Imagem do Produto" style="display:none; max-width: 100%; margin-top: 10px;">
+                </div>
+            </div>
+
+            <div class="input-container">
+                <label for="material">Material:</label>
+                <select id="material" name="material">
+                    <option value="">Selecione</option>
+                    <option value="material1">Alumínio</option>
+                    <option value="material2">Ferro</option>
+                    <option value="material3">Aço</option>
+                </select>
+            </div>
+
+            <div class="input-container">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" name="quantidade" id="quantidade">
+            </div>
+
+            <div class="input-container">
+                <label for="valor_unitario">Valor Unitário:</label>
+                <input type="number" id="valor_unitario" name="valor_unitario">
+            </div>
+
+
+            <div class="buttons">
+                <button type="button" class="cancelar">Cancelar</button>
+                <button type="submit" class="registrar">Registrar</button>
+            </div>
+        </form>
+    </main>
+
+    <section>
+        <!-- Footer -->
+        <footer class="text-center text-md-start text-white py-3" style="background-color: #4A7F4F;">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Coluna de links -->
+                    <div class="col-md-2">
+                        <ul class="list-unstyled">
+                            <li><a href="#!" class="text-white">Ajuda</a></li>
+                            <li><a href="#!" class="text-white">Dicas de Segurança</a></li>
+                            <li><a href="#!" class="text-white">Termos de uso</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Coluna de e-mail e copyright -->
+                    <div class="col-md-8">
+                        <div class="d-flex justify-content-center align-items-center flex-column">
+                            <a href="mailto:espacoverde@gmail.com" class="text-white">
+                                <i class="bi bi-envelope" style="font-size: 1.5rem;"></i> espacoverde@gmail.com
+                            </a>
+                            <p class="mt-2">© Tudo o que precisa aqui - Espaço Verde</p>
+                        </div>
+                    </div>
+    
+                    <!-- Coluna de ícones sociais -->
+                    <div class="col-md-2">
+                        <div class="d-flex justify-content-center">
+                            <img src="vendor/bs5.3.3/icons/Icone com fundo.svg" alt="Icone Espaço Verde" style="width: 75px; height: 75px;">
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid row -->
+            </div>
+            <!-- Grid container -->
+        </footer>
+        <!-- Footer -->
+    </section>
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('preview');
+                output.src = reader.result;
+                output.style.display = 'block'; 
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>
